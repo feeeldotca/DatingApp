@@ -496,3 +496,10 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+/obj
+API/obj/staticwebassets.pack.sentinel
+API/obj/Debug/net6.0/API.csproj.CoreCompileInputs.cache
+API/obj/Debug/net6.0/API.dll
+API/obj/Debug/net6.0/API.pdb
+API/obj/Debug/net6.0/ref/API.dll
+API/obj/Debug/net6.0/refint/API.dll
