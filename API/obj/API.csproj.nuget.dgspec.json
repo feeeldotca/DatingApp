@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "L:\\techcareers\\webapi\\datingapp\\api\\API.csproj": {}
+    "L:\\techcareers\\WebApi\\DatingApp\\API\\API.csproj": {}
   },
   "projects": {
-    "L:\\techcareers\\webapi\\datingapp\\api\\API.csproj": {
+    "L:\\techcareers\\WebApi\\DatingApp\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "L:\\techcareers\\webapi\\datingapp\\api\\API.csproj",
+        "projectUniqueName": "L:\\techcareers\\WebApi\\DatingApp\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "L:\\techcareers\\webapi\\datingapp\\api\\API.csproj",
+        "projectPath": "L:\\techcareers\\WebApi\\DatingApp\\API\\API.csproj",
         "packagesPath": "C:\\Users\\zhang\\.nuget\\packages\\",
-        "outputPath": "L:\\techcareers\\webapi\\datingapp\\api\\obj\\",
+        "outputPath": "L:\\techcareers\\WebApi\\DatingApp\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
