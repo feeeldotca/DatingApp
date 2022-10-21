@@ -52,3 +52,11 @@ L:\techcareers\WebApi\DatingApp\API\bin\Debug\net6.0\runtimes\win-x64\native\e_s
 L:\techcareers\WebApi\DatingApp\API\bin\Debug\net6.0\runtimes\win-x86\native\e_sqlite3.dll
 L:\techcareers\WebApi\DatingApp\API\bin\Debug\net6.0\Humanizer.dll
 L:\techcareers\WebApi\DatingApp\API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+L:\techcareers\WebApi\DatingApp\API\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+L:\techcareers\WebApi\DatingApp\API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+L:\techcareers\WebApi\DatingApp\API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+L:\techcareers\WebApi\DatingApp\API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+L:\techcareers\WebApi\DatingApp\API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+L:\techcareers\WebApi\DatingApp\API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+L:\techcareers\WebApi\DatingApp\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+L:\techcareers\WebApi\DatingApp\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
