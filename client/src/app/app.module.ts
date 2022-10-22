@@ -9,6 +9,8 @@ import { MemberDetailComponent } from './members/member-detail/member-detail.com
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { HomeComponent } from './home/home.component';
+import { NavComponent } from './nav/nav.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,13 +21,15 @@ import { HomeComponent } from './home/home.component';
     ListsComponent,
     MessagesComponent,
     HomeComponent,
+    NavComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
