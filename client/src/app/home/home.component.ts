@@ -8,7 +8,7 @@ import { ServiceService } from '../service.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  registerMode: boolean = false;
   users: User[]=[];
   constructor(private service: ServiceService){}
 
@@ -16,6 +16,10 @@ export class HomeComponent implements OnInit {
     this.service.getUsers().subscribe(response=>{
       this.users=response;
     })
+  }
+
+  registerToggle(){
+    this.registerMode = !this.registerMode;
   }
 
 }
