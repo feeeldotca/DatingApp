@@ -3,6 +3,9 @@ import { Injectable } from '@angular/core';
 import { ReplaySubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { User } from '../models/user';
+import { Users } from '../models/user.modle';
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -25,12 +28,23 @@ export class AccountService {
     ));
   }
 
+  register(model: Users){
+    return this.http.post(this.baseUrl+'account/register', model).pipe(
+     map((user:any)=>{ 
+        if(user){
+          localStorage.setItem('user', JSON.stringify(user));
+          this.currentUserSource.next(user);
+        }  
+     })
+    )
+  }
+
   setCurrentUser(user: User){
     this.currentUserSource.next(user);
   }
 
   logout() {
     localStorage.removeItem('user');
-    //this.currentUserSource.next(null);
+    this.currentUserSource.next();
   }
 }

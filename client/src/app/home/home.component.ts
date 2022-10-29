@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../models/user.modle';
+import { Users } from '../models/user.modle';
 import { ServiceService } from '../service.service';
 
 @Component({
@@ -9,17 +9,19 @@ import { ServiceService } from '../service.service';
 })
 export class HomeComponent implements OnInit {
   registerMode: boolean = false;
-  users: User[]=[];
-  constructor(private service: ServiceService){}
+
+  constructor(){}
 
   ngOnInit(): void {
-    this.service.getUsers().subscribe(response=>{
-      this.users=response;
-    })
+
   }
 
   registerToggle(){
     this.registerMode = !this.registerMode;
+  }
+
+  cancelRegisterMode(event: boolean) {
+    this.registerMode = event;
   }
 
 }

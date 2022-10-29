@@ -13,7 +13,8 @@
     <div class="container" *ngIf="registerMode">
         <div class="justify-content-center row">
             <div class="col-4">
-                <app-register></app-register>
+                <!-- Home Component is father component of Register component -->
+                <app-register (cancelRegister)="cancelRegisterMode($event)"></app-register>
             </div>
         </div>
     </div>
