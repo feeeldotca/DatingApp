@@ -50,10 +50,14 @@ namespace API.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto, int i)
         {
+            //check if login username is registered, if not then give error message 
             var user = await _context.Users.SingleOrDefaultAsync(x=>x.UserName==loginDto.Username);
             if(user == null) return Unauthorized("Invalid username");
+
+            //calculate password hash by default salt configured
             using var hmac = new HMACSHA512(user.PasswordSalt);
             var computeHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(loginDto.Password));
+            //compare calculated password hash with existing value byte by byte, if not match then error messages given
             for(int j = 0; j<computeHash.Length; j++){
                 if(computeHash[j] != user.PasswordHash[j])
                 return Unauthorized("Invalid Password");
@@ -64,6 +68,7 @@ namespace API.Controllers
                 Token = _tokenService.CreateToken(user)
             };
         }
+
 
         private async Task<bool> UserExists(string username){
             return await _context.Users.AnyAsync(u=>u.UserName == username.ToLower());

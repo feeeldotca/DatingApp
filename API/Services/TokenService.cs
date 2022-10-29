@@ -16,6 +16,10 @@ namespace API.Services
         // introduce microsoft Symmetric Security key for both encryption and decryption
         // JWT use symmetric key which does not leave the server
         private readonly SymmetricSecurityKey _key;
+
+        // token key was set in appsettings.Development.json as: 
+        // "TokenKey": "super secret unguessable key", and this key file should not be exposed to others
+        // this app is for demo only so help yourself to change the key
         public TokenService(IConfiguration config){
            _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["TokenKey"]));
         }

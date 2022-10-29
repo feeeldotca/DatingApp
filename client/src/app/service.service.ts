@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class ServiceService implements OnInit{
   
   constructor(private http:HttpClient) { }
-  //users: any; //User[]=[];
+
   title = 'The Dating App'; 
   ngOnInit(): void {
     

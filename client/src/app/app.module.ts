@@ -13,6 +13,7 @@ import { NavComponent } from './nav/nav.component';
 import { FormsModule } from '@angular/forms';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { RegisterComponent } from './register/register.component'
+import { ToastrModule} from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -23,8 +24,7 @@ import { RegisterComponent } from './register/register.component'
     MessagesComponent,
     HomeComponent,
     NavComponent,
-    RegisterComponent,
-
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +32,10 @@ import { RegisterComponent } from './register/register.component'
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    ToastrModule.forRoot({
+      positionClass: 'toastr-top-right'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
