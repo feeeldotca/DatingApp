@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ReplaySubject } from 'rxjs';
+import { EMPTY, ReplaySubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { User } from '../models/user';
 import { Users } from '../models/user.modle';
@@ -45,6 +45,6 @@ export class AccountService {
 
   logout() {
     localStorage.removeItem('user');
-    this.currentUserSource.next();
+    this.currentUserSource.next(undefined);
   }
 }
