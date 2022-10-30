@@ -7,16 +7,9 @@ import {ServiceService} from '../..//service.service'
 })
 export class MemberListComponent implements OnInit {
 
-  constructor(private service: ServiceService) { }
-  users: any=[];
+  constructor() { }
+  
   ngOnInit(): void {
-    this.service.getUsers().subscribe(response =>{
-      this.users = response;
-      if(this.users){
-        console.log(response);        
-      }
-    }, error=>console.log(error)
-    )
   }
 
 }

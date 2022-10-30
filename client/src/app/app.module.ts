@@ -11,9 +11,9 @@ import { MessagesComponent } from './messages/messages.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { FormsModule } from '@angular/forms';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { RegisterComponent } from './register/register.component'
-import { ToastrModule} from 'ngx-toastr';
+import { RegisterComponent } from './register/register.component';
+import { SharedModule } from './_modules/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -32,10 +32,7 @@ import { ToastrModule} from 'ngx-toastr';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    BsDropdownModule.forRoot(),
-    ToastrModule.forRoot({
-      positionClass: 'toastr-top-right'
-    })
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
