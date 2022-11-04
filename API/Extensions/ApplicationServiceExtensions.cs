@@ -17,6 +17,8 @@ namespace API.Extensions
             // specified in TokenService to the specified IServiceCollection
             services.AddScoped<ITokenService, TokenService>();
 
+            services.AddScoped<IUserRepository, UserRepository>();
+
             // Configures the context to connect to a SQLite database.
             // appsettings.Development.json has defined: "ConnectionStrings":"DefaultConnection": "Data source=datingapp.db"
             // here we add this connection of DB to DbContext instance DataContext
