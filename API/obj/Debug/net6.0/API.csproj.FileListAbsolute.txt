@@ -61,3 +61,5 @@ L:\techcareers\WebApi\DatingApp\API\obj\Debug\net6.0\API.pdb
 L:\techcareers\WebApi\DatingApp\API\obj\Debug\net6.0\API.genruntimeconfig.cache
 L:\techcareers\WebApi\DatingApp\API\obj\Debug\net6.0\ref\API.dll
 L:\techcareers\WebApi\DatingApp\API\bin\Debug\net6.0\Data\Migrations\UserSeedData.json
+L:\techcareers\WebApi\DatingApp\API\bin\Debug\net6.0\AutoMapper.dll
+L:\techcareers\WebApi\DatingApp\API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

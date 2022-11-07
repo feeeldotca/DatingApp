@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using API.Data;
+using API.Helpers;
 using API.Interfaces;
 using API.Services;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +19,10 @@ namespace API.Extensions
             services.AddScoped<ITokenService, TokenService>();
 
             services.AddScoped<IUserRepository, UserRepository>();
+
+            // for AutoMapper to go ahead and find those profiles the CreateMaps
+            // that we created inside class AutoMapperProfiles
+            services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
 
             // Configures the context to connect to a SQLite database.
             // appsettings.Development.json has defined: "ConnectionStrings":"DefaultConnection": "Data source=datingapp.db"
