@@ -13,6 +13,7 @@ import { NavComponent } from './nav/nav.component';
 import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { SharedModule } from './_modules/shared.module';
+import { MemberCardComponent } from './members/member-card/member-card.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { SharedModule } from './_modules/shared.module';
     MessagesComponent,
     HomeComponent,
     NavComponent,
-    RegisterComponent
+    RegisterComponent,
+    MemberCardComponent
   ],
   imports: [
     BrowserModule,
