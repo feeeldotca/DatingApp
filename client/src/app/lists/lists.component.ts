@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Member } from '../models/member';
 import {ServiceService} from '../service.service'
 
 @Component({
@@ -7,7 +8,7 @@ import {ServiceService} from '../service.service'
   styleUrls: ['./lists.component.css']
 })
 export class ListsComponent implements OnInit {
-
+  members: Member[]=[];
   constructor(private service: ServiceService) { }
   users: any=[];
   ngOnInit(): void { 
