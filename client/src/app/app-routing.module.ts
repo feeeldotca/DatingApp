@@ -33,6 +33,7 @@ const routes: Routes = [
       }
     ]
   },
+  // added paths for error handler components
   {path: 'errors', component: TestErrorsComponent },
   {path: 'not-found', component: NotFoundComponent },
   {path: 'server-error', component: ServerErrorComponent },
