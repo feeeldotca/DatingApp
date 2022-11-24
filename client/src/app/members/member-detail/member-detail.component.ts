@@ -12,7 +12,7 @@ import { MembersService } from 'src/app/_service/member.service';
 
 export class MemberDetailComponent implements OnInit {
 
-  member: Member;
+  member: Member | undefined;
   constructor(private memberService: MembersService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -20,7 +20,9 @@ export class MemberDetailComponent implements OnInit {
   }
 
   loadMember() {    
-    this.memberService.getMember(this.route.snapshot.paramMap.get('username'))
-    .subscribe(member => this.member = member)
+    var username = this.route.snapshot.paramMap.get('username');
+    if(!username) return ;
+    this.memberService.getMember(username)
+    .subscribe({next: member => this.member = member})
   }
 }

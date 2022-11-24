@@ -38,7 +38,7 @@ const routes: Routes = [
   {path: 'not-found', component: NotFoundComponent },
   {path: 'server-error', component: ServerErrorComponent },
   {
-    path: '**', component: HomeComponent, pathMatch: 'full'
+    path: '**', component: NotFoundComponent, pathMatch: 'full'
   }
 ];
 
