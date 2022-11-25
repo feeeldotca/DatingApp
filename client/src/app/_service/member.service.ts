@@ -22,11 +22,15 @@ import { Member } from '../models/member'
 
     getHttpOptions() {
       const userString = localStorage.getItem('user');
+      console.log('userstring=',userString);
+      
       if(!userString) return {};
       const user = JSON.parse(userString);
+      console.log('user=', user);
+      
       return {
         headers: new HttpHeaders({
-          Authorization: 'Bearer ' + user.token
+          Authorization: 'Bearer ' + user?.token
         })
       }
     }
