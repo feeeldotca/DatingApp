@@ -17,22 +17,16 @@ import { Member } from '../models/member'
     }
   
     getMember(username: string) {
-      return this.http.get<Member>(this.baseUrl + 'users/' + username, this.getHttpOptions());
+      return  this.http.get<Member>(this.baseUrl + 'users/' + username, this.getHttpOptions());
     }
 
     getHttpOptions() {
-      const userString = localStorage.getItem('user');
-      console.log('userstring=',userString);
-      
-      if(!userString) return {};
-      const user = JSON.parse(userString);
-      console.log('user=', user);
-      
+      const userString:any = localStorage.getItem('user');     
+      if(!userString) return {}; 
       return {
         headers: new HttpHeaders({
-          Authorization: 'Bearer ' + user?.token
-        })
-      }
+          Authorization: 'Bearer ' + JSON.parse(userString).token
+        })};      
     }
   }
 

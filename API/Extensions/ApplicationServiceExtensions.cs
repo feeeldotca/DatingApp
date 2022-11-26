@@ -22,7 +22,9 @@ namespace API.Extensions
 
             // for AutoMapper to go ahead and find those profiles the CreateMaps
             // that we created inside class AutoMapperProfiles
-            services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
+            
+            //services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             // Configures the context to connect to a SQLite database.
             // appsettings.Development.json has defined: "ConnectionStrings":"DefaultConnection": "Data source=datingapp.db"
