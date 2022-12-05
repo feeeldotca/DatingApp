@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { take } from 'rxjs/operators';
@@ -14,9 +14,17 @@ import { MembersService } from 'src/app/_service/member.service';
 })
 
 export class MemberEditComponent implements OnInit {
-  @ViewChild('editForm') editForm: NgForm | undefined
-  member: Member | undefined;
+  @ViewChild('editForm') editForm: NgForm | undefined;
+    //To prevent member leave Edit profile page to other site without saving changes
+  @HostListener('window:beforeunload',['$event']) unloadNotification($event: any){
+    if(this.editForm?.dirty) {
+      $event.returnValue = true;
+    }
+  }
+
+    member: Member | undefined;
   user: User | null = null;
+  
   constructor(private accountService: AccountService, 
     private toastr: ToastrService,
     private memberService: MembersService) 
