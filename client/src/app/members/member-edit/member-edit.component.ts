@@ -5,7 +5,7 @@ import { take } from 'rxjs/operators';
 import { Member } from 'src/app/models/member';
 import { User } from 'src/app/models/user';
 import { AccountService } from 'src/app/_service/account.service';
-import { MembersService } from 'src/app/_service/member.service';
+import { MembersService } from 'src/app/_service/members.service';
 
 @Component({
   selector: 'app-member-edit',
@@ -46,7 +46,8 @@ export class MemberEditComponent implements OnInit {
   }
 
   updateMember() {
-    console.log(this.member);
+    //console.log(this.member);
+    this.memberService.updateMember(this.editForm?.value)
     this.toastr.success("profile updated successfully!");
     this.editForm?.reset(this.member);
   }
