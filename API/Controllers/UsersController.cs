@@ -49,10 +49,10 @@ namespace API.Controllers
 
         [HttpGet("{username}")]
 
-        public async Task<ActionResult<MemberDto>> GetUserByUsername(string username)
+        public async Task<ActionResult<MemberDto>> GetUser(string username)
         {
-            var user = await _userRepository.GetUserByUsernameAsync(username);
-            return _mapper.Map<MemberDto>(user);
+            return await _userRepository.GetMemberAsync(username);
+            //return _mapper.Map<MemberDto>(user);
         }
 
         [HttpPut]
@@ -80,7 +80,12 @@ namespace API.Controllers
             if(user.Photos.Count == 0) photo.IsMain = true;
 
             user.Photos.Add(photo);
-            if(await _userRepository.SaveAllAsync()) return _mapper.Map<PhotoDto>(photo);
+            if(await _userRepository.SaveAllAsync()) 
+            {
+                return CreatedAtAction(nameof(GetUsers),                 
+                new {username = user.UserName}, 
+                _mapper.Map<PhotoDto>(photo)); //_mapper.Map<PhotoDto>(photo);
+            }
 
             return BadRequest("Problem adding photo");
         }   
