@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "R7W0KjvFBg1U3Nal+kvd3KwOADuyaZlUjxiAAjbqHWIrlVzh9ri4XNyrtCUiXnuDlJYRbXVfqwFJbsq4p8sjbA==",
+  "dgSpecHash": "WmZax9wpzzM4FLOjzkvrjjj1GimqnHdXwJnpb1zANqVa8sDDZ8dO2TWwoMTv0Hd5U24hIOYEEw/4h6f1dwHlww==",
   "success": true,
   "projectFilePath": "L:\\techcareers\\WebApi\\DatingApp\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -61,7 +61,11 @@
     "C:\\Users\\zhang\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
     "C:\\Users\\zhang\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\zhang\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
-    "C:\\Users\\zhang\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
+    "C:\\Users\\zhang\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
+    "C:\\Users\\zhang\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.13\\microsoft.netcore.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\zhang\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.13\\microsoft.windowsdesktop.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\zhang\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.13\\microsoft.aspnetcore.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\zhang\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.13\\microsoft.netcore.app.host.win-x64.6.0.13.nupkg.sha512"
   ],
   "logs": []
 }
